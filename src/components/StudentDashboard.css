@@ -1,0 +1,346 @@
+.sd-shell {
+  min-height: 100vh;
+  background: #F9FAFB;
+  font-family: 'Inter', system-ui, sans-serif;
+  display: flex;
+}
+
+.sd-main {
+  flex: 1;
+  padding: 24px 28px;
+  overflow: auto;
+}
+
+.sd-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.sd-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #6B7280;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.sd-breadcrumb-current {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 60vw;
+}
+
+@media (max-width: 480px) {
+  .sd-breadcrumb-current {
+    max-width: 40vw;
+  }
+}
+
+.sd-breadcrumb-current {
+  color: #1C1F26;
+  font-weight: 500;
+}
+
+.sd-feedback-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1C1F26;
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.sd-dashboard-flex {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.sd-dashboard-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.sd-stats-row {
+  display: flex;
+  gap: 10px;
+}
+
+.sd-stat-clickable {
+  flex: 1;
+  cursor: pointer;
+  min-width: 220px;
+}
+
+.sd-theme-toggle-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #E5E7EB;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.sd-hamburger-btn {
+  display: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .sd-main {
+    padding: 16px;
+  }
+  .sd-hamburger-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .sd-main {
+    padding: 12px;
+  }
+  .sd-stat-clickable {
+    min-width: 0;
+  }
+}
+
+/* Dark theme overrides for student dashboard */
+body.dark-theme .sd-shell {
+  background: #0B0B0F;
+}
+
+body.dark-theme .sd-breadcrumb-current {
+  color: #F3F4F6;
+}
+
+body.dark-theme .sd-breadcrumb {
+  color: #9CA3AF;
+}
+
+body.dark-theme .sd-theme-toggle-btn,
+body.dark-theme .sd-hamburger-btn {
+  background: #17181D;
+  border-color: #2C2D33;
+}
+
+body.dark-theme .sc-card,
+body.dark-theme .acc-card,
+body.dark-theme .fee-table-card,
+body.dark-theme .fee-table-wrapper,
+body.dark-theme .ss-calendar-card,
+body.dark-theme .ss-tabs-card {
+  background: #17181D !important;
+  border-color: #2C2D33 !important;
+}
+
+body.dark-theme .sc-value,
+body.dark-theme .acc-title,
+body.dark-theme .acc-course-title,
+body.dark-theme .acc-progress-value,
+body.dark-theme .acc-meta-value,
+body.dark-theme .fee-table-title,
+body.dark-theme .month-cell,
+body.dark-theme .ss-calendar-title,
+body.dark-theme .ss-day-date {
+  color: #F3F4F6 !important;
+}
+
+body.dark-theme .sc-label,
+body.dark-theme .acc-timing-chip,
+body.dark-theme .acc-progress-label,
+body.dark-theme .acc-meta-label,
+body.dark-theme .ss-day-name,
+body.dark-theme .ss-empty-message {
+  color: #9CA3AF !important;
+}
+
+body.dark-theme .acc-progress-track {
+  background: #2C2D33 !important;
+}
+
+body.dark-theme table,
+body.dark-theme .fee-table {
+  background: #17181D !important;
+  color: #E5E7EB !important;
+}
+
+body.dark-theme .fee-table th {
+  color: #9CA3AF !important;
+  border-color: #2C2D33 !important;
+}
+
+body.dark-theme .fee-table thead tr {
+  background: #0B0B0F !important;
+}
+
+body.dark-theme .fee-table td {
+  border-color: #2C2D33 !important;
+  color: #E5E7EB !important;
+}
+
+body.dark-theme .fee-table tbody tr {
+  border-top-color: #2C2D33 !important;
+}
+
+body.dark-theme .fee-copy-btn {
+  border-color: #2C2D33 !important;
+}
+
+body.dark-theme .table-row-hover:hover {
+  background-color: #22252C !important;
+}
+
+body.dark-theme .sb-aside {
+  background: #0B0B0F !important;
+}
+
+body.dark-theme .sb-nav-btn {
+  color: #9CA3AF !important;
+}
+
+body.dark-theme .sb-nav-btn.active,
+body.dark-theme .sb-nav-btn:hover {
+  background: #2C2D33 !important;
+  color: #F3F4F6 !important;
+}
+
+body.dark-theme .sb-brand-text,
+body.dark-theme .sb-user-row {
+  color: #F3F4F6 !important;
+}
+
+/* Attendance / Assignment / Quiz / Progress inner boxes (rendered inside dashboard) */
+body.dark-theme .att-summary-box,
+body.dark-theme .att-overview-card,
+body.dark-theme .att-dropdown-wrap,
+body.dark-theme .att-dropdown-menu,
+body.dark-theme .ap-summary-box,
+body.dark-theme .pg-summary-box,
+body.dark-theme .qz-summary-box,
+body.dark-theme .responsive-table-grid,
+body.dark-theme .att-table-header,
+body.dark-theme .ap-table-header,
+body.dark-theme .module-row,
+body.dark-theme .topic-row,
+body.dark-theme .summary-box {
+  background: #17181D !important;
+  border-color: #2C2D33 !important;
+  color: #E5E7EB !important;
+}
+
+body.dark-theme .att-summary-value,
+body.dark-theme .ap-summary-value,
+body.dark-theme .pg-summary-value,
+body.dark-theme .att-overview-title,
+body.dark-theme .att-overview-pct,
+body.dark-theme .pg-module-name,
+body.dark-theme .pg-topics-heading,
+body.dark-theme .ap-name-cell {
+  color: #F3F4F6 !important;
+}
+
+body.dark-theme .att-summary-label,
+body.dark-theme .ap-summary-label,
+body.dark-theme .pg-summary-label,
+body.dark-theme .att-overview-sub,
+body.dark-theme .pg-module-sub,
+body.dark-theme .pg-topic-date,
+body.dark-theme .ap-closed-text {
+  color: #9CA3AF !important;
+}
+
+body.dark-theme .att-overview-track,
+body.dark-theme .acc-progress-track {
+  background: #2C2D33 !important;
+}
+
+/* Sidebar toggle button */
+body.dark-theme .sb-toggle-btn {
+  background: #17181D !important;
+  border-color: #2C2D33 !important;
+}
+
+/* StatCard */
+body.dark-theme .sc-card {
+  background: #17181D !important;
+  border-color: #2C2D33 !important;
+}
+
+/* ScheduleSidebar */
+body.dark-theme .ss-calendar-card,
+body.dark-theme .ss-tabs-card {
+  background: #17181D !important;
+  border-color: #2C2D33 !important;
+}
+
+body.dark-theme .ss-tab-btn.active {
+  background: #2C2D33 !important;
+  color: #F3F4F6 !important;
+}
+
+/* ActiveCourseCard timing chip */
+body.dark-theme .acc-timing-chip {
+  background: #0B0B0F !important;
+  border-color: #2C2D33 !important;
+  color: #9CA3AF !important;
+}
+
+/* Assignment page */
+body.dark-theme .ap-summary-box,
+body.dark-theme .ap-table-card,
+body.dark-theme .ap-page-num-btn {
+  background: #17181D !important;
+  border-color: #2C2D33 !important;
+  color: #E5E7EB !important;
+}
+
+/* Attendance page */
+body.dark-theme .att-summary-box,
+body.dark-theme .att-overview-card,
+body.dark-theme .att-table-card,
+body.dark-theme .att-dropdown-menu,
+body.dark-theme .att-dropdown-toggle {
+  background: #17181D !important;
+  border-color: #2C2D33 !important;
+  color: #E5E7EB !important;
+}
+
+/* Quiz page */
+body.dark-theme .qz-info-card,
+body.dark-theme .qz-table-card {
+  background: #17181D !important;
+  border-color: #2C2D33 !important;
+  color: #E5E7EB !important;
+}
+
+/* Placeholder page */
+body.dark-theme .pp-card {
+  background: #17181D !important;
+  border-color: #2C2D33 !important;
+  color: #E5E7EB !important;
+}

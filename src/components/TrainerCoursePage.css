@@ -1,0 +1,541 @@
+.tcp-shell {
+  min-height: 100vh;
+  background: #F9FAFB;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.tcp-main {
+  padding: 24px 28px;
+}
+
+.tcp-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-right: 50px;
+}
+
+.tcp-course-heading {
+  font-size: clamp(18px, 4vw, 22px);
+  font-weight: 700;
+  color: #1C1F26;
+  margin: 0 0 16px 0;
+}
+
+@media (max-width: 768px) {
+  .tcp-main {
+    padding: 60px 16px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tcp-main {
+    padding: 56px 12px 12px;
+  }
+}
+
+.tcp-tabs-row {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tcp-page-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  color: #6B7280;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.tcp-page-tab.active {
+  color: #2563EB;
+  border-bottom: 2px solid #2563EB;
+}
+
+.tcp-tab-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+/* Toolbar / search */
+.tcp-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.tcp-search-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 8px 12px;
+  min-width: 240px;
+  flex: 1 1 240px;
+}
+
+@media (max-width: 480px) {
+  .tcp-toolbar {
+    justify-content: stretch;
+  }
+  .tcp-search-box,
+  .tcp-filter-select {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+}
+
+.tcp-search-box input {
+  border: none;
+  outline: none;
+  font-size: 13px;
+  width: 100%;
+}
+
+.tcp-filter-select {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #1C1F26;
+  background: #fff;
+}
+
+/* Table */
+.tcp-table-wrap {
+  overflow-x: auto;
+}
+
+.tcp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.tcp-table thead th {
+  text-align: left;
+  color: #6B7280;
+  font-weight: 500;
+  padding: 10px 12px;
+  border-bottom: 1px solid #E5E7EB;
+  white-space: nowrap;
+}
+
+.tcp-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #F3F4F6;
+  color: #1C1F26;
+  vertical-align: top;
+}
+
+.tcp-desc-cell {
+  max-width: 260px;
+  color: #6B7280;
+  white-space: pre-line;
+}
+
+.tcp-status-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: #EAF0FB;
+  color: #2563EB;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.tcp-tag-pill {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: #F3E8FF;
+  color: #9333EA;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.tcp-topic-pill {
+  display: inline-block;
+  margin: 2px 4px 2px 0;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #EAF0FB;
+  color: #2563EB;
+  font-size: 11px;
+}
+
+.tcp-topic-more {
+  font-size: 11px;
+  color: #6B7280;
+}
+
+.tcp-no-topics {
+  color: #9CA3AF;
+  font-size: 12px;
+}
+
+.tcp-active-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: rgba(34,197,94,0.12);
+  color: #16A34A;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.tcp-actions-cell {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Pagination */
+.tcp-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  font-size: 12px;
+  color: #6B7280;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tcp-page-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tcp-page-btn {
+  border: 1px solid #E5E7EB;
+  background: #fff;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tcp-page-num {
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #6B7280;
+}
+
+.tcp-page-num.active {
+  background: #2563EB;
+  color: #fff;
+}
+
+/* Assignments header */
+.tcp-assignments-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 14px;
+}
+
+.tcp-new-assignment-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #2E4680;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .tcp-assignments-header {
+    width: 100%;
+  }
+  .tcp-new-assignment-btn {
+    width: 100%;
+  }
+}
+
+/* Attendance */
+.tcp-date-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: #1C1F26;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .tcp-date-row {
+    justify-content: flex-start;
+  }
+  .tcp-date-row input {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+.tcp-date-row input {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.tcp-summary-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tcp-summary-box {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 16px 18px;
+  position: relative;
+  min-width: 140px;
+}
+
+@media (max-width: 900px) {
+  .tcp-summary-box {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 640px) {
+  .tcp-summary-box {
+    flex: 1 1 100%;
+  }
+}
+
+.tcp-summary-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1C1F26;
+}
+
+.tcp-summary-label {
+  font-size: 12px;
+  color: #6B7280;
+  margin-top: 2px;
+}
+
+.tcp-summary-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.tcp-attendance-btns {
+  display: flex;
+  gap: 6px;
+}
+
+.tcp-mark-btn {
+  border: 1px solid #E5E7EB;
+  background: #fff;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tcp-mark-btn.present.active {
+  background: rgba(34,197,94,0.12);
+  border-color: #16A34A;
+  color: #16A34A;
+}
+
+.tcp-mark-btn.absent.active {
+  background: rgba(239,68,68,0.12);
+  border-color: #DC2626;
+  color: #DC2626;
+}
+
+.tcp-mark-btn.leave.active {
+  background: rgba(202,138,4,0.12);
+  border-color: #CA8A04;
+  color: #CA8A04;
+}
+
+/* Course Progress */
+.tcp-compare-box {
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+
+.tcp-compare-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #9CA3AF;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.tcp-compare-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1C1F26;
+  margin-bottom: 10px;
+}
+
+.tcp-compare-select {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 13px;
+  color: #1C1F26;
+  cursor: pointer;
+}
+
+.tcp-logout-btn {
+  max-width: 200px;
+  margin-top: 24px;
+}
+
+.tcp-theme-toggle-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #E5E7EB;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+/* Dark theme overrides for trainer course page */
+body.dark-theme .tcp-shell {
+  background: #0B0B0F;
+}
+
+body.dark-theme .tcp-course-heading,
+body.dark-theme .sd-breadcrumb-current,
+body.dark-theme .tcp-summary-value,
+body.dark-theme .tcp-compare-title,
+body.dark-theme .tcp-table tbody td {
+  color: #F3F4F6;
+}
+
+body.dark-theme .sd-breadcrumb,
+body.dark-theme .tcp-summary-label,
+body.dark-theme .tcp-table thead th,
+body.dark-theme .tcp-desc-cell,
+body.dark-theme .tcp-pagination,
+body.dark-theme .tcp-compare-label {
+  color: #9CA3AF;
+}
+
+body.dark-theme .tcp-tabs-row {
+  border-bottom-color: #2C2D33;
+}
+
+body.dark-theme .tcp-page-tab {
+  color: #9CA3AF;
+}
+
+body.dark-theme .tcp-page-tab.active {
+  color: #60A5FA;
+  border-bottom-color: #60A5FA;
+}
+
+body.dark-theme .tcp-tab-content {
+  background: #0B0B0F;
+}
+
+body.dark-theme .tcp-table thead th,
+body.dark-theme .tcp-table tbody td {
+  border-bottom-color: #2C2D33;
+}
+
+body.dark-theme .tcp-search-box,
+body.dark-theme .tcp-filter-select,
+body.dark-theme .tcp-date-row input,
+body.dark-theme .tcp-page-btn,
+body.dark-theme .tcp-mark-btn,
+body.dark-theme .tcp-compare-select,
+body.dark-theme .tcp-compare-box,
+body.dark-theme .tcp-summary-box {
+  background: #17181D;
+  border-color: #2C2D33;
+  color: #F3F4F6;
+}
+
+body.dark-theme .tcp-search-box input {
+  background: transparent;
+  color: #F3F4F6;
+}
+
+body.dark-theme .tcp-theme-toggle-btn {
+  background: #17181D;
+  border-color: #2C2D33;
+}
+
+body.dark-theme .tcp-new-assignment-btn {
+  background: #2E4680;
+}
+
+body.dark-theme .tcp-status-pill,
+body.dark-theme .tcp-topic-pill {
+  background: #1E2430;
+  color: #60A5FA;
+}
+
+body.dark-theme .tcp-tag-pill {
+  background: rgba(147, 51, 234, 0.15);
+  color: #C084FC;
+}
+
+body.dark-theme .tcp-topic-more,
+body.dark-theme .tcp-no-topics {
+  color: #9CA3AF;
+}
+
+body.dark-theme .tcp-page-num {
+  color: #9CA3AF;
+}
